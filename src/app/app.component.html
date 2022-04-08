@@ -1,4 +1,8 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>Menu</h1>
+<hr />
+<header>
+  <a [routerLink]="['']">Home</a>
+  <a [routerLink]="['/luca-lista']">Lista</a>
+  <a [routerLink]="['/luca-disciplinas']">Disciplinas</a>
+</header>
+<router-outlet></router-outlet>
