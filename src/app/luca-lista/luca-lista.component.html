@@ -27,14 +27,15 @@
 </table>
 
 <form>
-<label for="disciplina">Adicione sua disciplina</label> <br>
-<input type="text" id="disciplina" [(ngModel)]="newSubject" value="">
-<button (click)="addToList()">Adicionar</button>
-
-<div *ngFor="let s of subjects; let index = index;">
-
-<div>{{s}}
-
+<div>
+<input #input type="text" />
+<button (click)="luca-disciplinas.add(input.value); input.value = ''">Adicionar</button>
 </div>
-</div>
+<ul>
+<li *ngFor="let subject of luca-disciplinas.getList(); index as i">
+  {{task.title}
+  <span (click)="luca-disciplinas.remove(i)" style="cursor: pointer"></span>
+  }
+</li>
+</ul>
 </form>

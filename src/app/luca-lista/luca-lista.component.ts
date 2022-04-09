@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { listSubjects } from '../list';
+import { LucaDisciplinasService } from '../luca-disciplinas.service';
 
 @Component({
   selector: 'app-luca-lista',
@@ -8,22 +9,14 @@ import { listSubjects } from '../list';
 })
 export class LucaListaComponent implements OnInit {
   list = listSubjects;
-  subjects: string[] = [];
 
   newSubject: any;
 
-  constructor() {}
+  constructor(public subjects: LucaDisciplinasService) {}
 
   ngOnInit() {}
 
   remove(index: number) {
     this.list.splice(index, 1);
-  }
-  addToList() {
-    if (this.newSubject == '') {
-    } else {
-      this.subjects.push(this.newSubject);
-      this.newSubject = '';
-    }
   }
 }
