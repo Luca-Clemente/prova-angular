@@ -1,0 +1,40 @@
+<h2>Lista de disciplinas cursadas por mim.</h2>
+<table border="1">
+  <tr>
+    <th>Código</th>
+    <th>Nome da disciplina</th>
+    <th>Dia da semana</th>
+    <th>Horário</th>
+    <th>Detalhes</th>
+    <th>Remover</th>
+  </tr>
+  <tr *ngFor="let item of list; index as i">
+    <td>
+      <a>
+       {{item.id}}
+      </a>
+    </td>
+    <td>{{item.curso}}</td>
+    <td>{{item.diaDaSemana}}</td>
+    <td>{{item.horario}}</td>
+    <td>
+      <a [routerLink]="['/list', i]">
+      {{item.curso}}
+      </a>
+    </td>
+    <td><button (click)="remove(i)">X</button></td>
+  </tr>
+</table>
+
+<form>
+<label for="disciplina">Adicione sua disciplina</label> <br>
+<input type="text" id="disciplina" [(ngModel)]="newSubject" value="">
+<button (click)="addToList()">Adicionar</button>
+
+<div *ngFor="let s of subjects; let index = index;">
+
+<div>{{s}}
+
+</div>
+</div>
+</form>

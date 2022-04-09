@@ -16,7 +16,7 @@ import { LucaDisciplinasService } from './luca-disciplinas.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: LucaComponent },
-      { path: 'luca-detalhes', component: LucaDetalhesComponent },
+      { path: 'list/:index', component: LucaDetalhesComponent },
       { path: 'luca-lista', component: LucaListaComponent },
     ]),
   ],
