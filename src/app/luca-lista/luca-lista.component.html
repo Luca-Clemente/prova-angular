@@ -26,16 +26,3 @@
   </tr>
 </table>
 
-<form>
-<div>
-<input #input type="text" />
-<button (click)="luca-disciplinas.add(input.value); input.value = ''">Adicionar</button>
-</div>
-<ul>
-<li *ngFor="let subject of luca-disciplinas.getList(); index as i">
-  {{task.title}
-  <span (click)="luca-disciplinas.remove(i)" style="cursor: pointer"></span>
-  }
-</li>
-</ul>
-</form>

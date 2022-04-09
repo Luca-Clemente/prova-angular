@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { listSubjects } from '../list';
-import { LucaDisciplinasService } from '../luca-disciplinas.service';
 
 @Component({
   selector: 'app-luca-lista',
@@ -10,9 +9,7 @@ import { LucaDisciplinasService } from '../luca-disciplinas.service';
 export class LucaListaComponent implements OnInit {
   list = listSubjects;
 
-  newSubject: any;
-
-  constructor(public subjects: LucaDisciplinasService) {}
+  constructor() {}
 
   ngOnInit() {}
 
